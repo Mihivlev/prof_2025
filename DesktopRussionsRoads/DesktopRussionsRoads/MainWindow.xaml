@@ -1,0 +1,356 @@
+﻿<Window x:Class="DesktopRussionsRoads.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopRussionsRoads"
+        mc:Ignorable="d"
+		Icon="/Resources/Logo.png"
+        Title="Дороги России" Height="900" Width="1600">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="70px"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<!--Верхняя панель-->
+		
+		<StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Background="#78B24B" HorizontalAlignment="Stretch">
+			<Image Width="70" Source="/Resources/Logo.png"  HorizontalAlignment="Left"/>
+			<Border CornerRadius="15" Background="White" VerticalAlignment="Center" Margin="10" Padding="5" Width="700">
+				<TextBlock Text="Организационная структура" FontSize="20" HorizontalAlignment="Left"/>
+			</Border>
+		</StackPanel>
+
+		<!--Структура организации-->
+		
+		<ScrollViewer Grid.Row="1" Margin="10" Background="LightGray" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+			<Canvas  Width="10000" Grid.Row="1">
+
+				<Line X1="5100" X2="1100" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="2600" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="3200" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="4000" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="5200" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="6100" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="6350" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="6600" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="7000" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="7350" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="8000" Y1="147" Y2="203" Stroke="Black"/>
+				<Line X1="5100" X2="8750" Y1="147" Y2="203" Stroke="Black"/>
+
+				<Button  Name="btn0" Canvas.Top="50" Canvas.Left="5000" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Дороги России" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Административный департамент-->
+				<Line X1="1100" X2="150" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="1100" X2="400" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="1100" X2="650" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="1100" X2="900" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="1100" X2="1150" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="1100" X2="1400" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="1100" X2="1650" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="1100" X2="1900" Y1="297" Y2="353" Stroke="Black"/>
+
+				<Line X1="1400" X2="1250" Y1="447" Y2="503" Stroke="Black"/>
+				<Line X1="1400" X2="1550" Y1="447" Y2="503" Stroke="Black"/>
+
+
+				<Button Name="btn1" Canvas.Top="200" Canvas.Left="1000" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Административный департамент" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn2" Canvas.Top="350" Canvas.Left="50" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Административный департамент" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn3"  Canvas.Top="350" Canvas.Left="300" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Договорной отдел" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn4" Canvas.Top="350" Canvas.Left="550" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Общий отдел" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn5" Canvas.Top="350" Canvas.Left="800" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел закупок" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn6" Canvas.Top="350" Canvas.Left="1050" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел протокольного сопровождения" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn7" Canvas.Top="350" Canvas.Left="1300" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление административно-хозяйственной  деятельностью" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn8" Canvas.Top="500" Canvas.Left="1150" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел ИТ" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn9" Canvas.Top="500" Canvas.Left="1450" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление административно-хозяйственной деятельностью" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn10" Canvas.Top="350" Canvas.Left="1550" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление безопасности" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn11" Canvas.Top="350" Canvas.Left="1800" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление по обеспечению безопасности" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Академия Умные дороги-->
+				<Line X1="2600" X2="2200" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="2600" X2="2450" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="2600" X2="2700" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="2600" X2="2950" Y1="297" Y2="353" Stroke="Black"/>
+
+				<Button Name="btn12" Canvas.Top="200" Canvas.Left="2500" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Академия Умные дороги" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn13" Canvas.Top="350" Canvas.Left="2100" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Академия Умные дороги" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn14" Canvas.Top="350" Canvas.Left="2350" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел сетевых программ" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn15" Canvas.Top="350" Canvas.Left="2600" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Проектно-аналитический отдел" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn16" Canvas.Top="350" Canvas.Left="2850" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Учебно-организационный отдел" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Аппарат управления-->
+
+				<Button Name="btn17" Canvas.Top="200" Canvas.Left="3100" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Аппарат управления" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Департамент коммуникаций-->
+				<Line X1="4000" X2="3450" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="4000" X2="3700" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="4000" X2="4300" Y1="297" Y2="353" Stroke="Black"/>
+
+				<Line X1="3700" X2="3550" Y1="447" Y2="503" Stroke="Black"/>
+				<Line X1="3700" X2="3800" Y1="447" Y2="503" Stroke="Black"/>
+
+				<Line X1="4300" X2="4050" Y1="447" Y2="503" Stroke="Black"/>
+				<Line X1="4300" X2="4300" Y1="447" Y2="503" Stroke="Black"/>
+				<Line X1="4300" X2="4550" Y1="447" Y2="503" Stroke="Black"/>
+
+				<Button Name="btn18" Canvas.Top="200" Canvas.Left="3900" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Департамент коммуникаций" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn19" Canvas.Top="350" Canvas.Left="3350" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Департамент коммуникаций" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn20" Canvas.Top="350" Canvas.Left="3600" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление по PR-проектам" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn21" Canvas.Top="500" Canvas.Left="3450" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел по организации и сопровождению мероприятий" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn22" Canvas.Top="500" Canvas.Left="3700" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел по работе с корпорациями" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn23" Canvas.Top="350" Canvas.Left="4200" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление Пресс-службы" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn24" Canvas.Top="500" Canvas.Left="3950" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел по работе со СМИ" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn25" Canvas.Top="500" Canvas.Left="4200" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел цифровых коммуникаций" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn26" Canvas.Top="500" Canvas.Left="4450" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление Пресс-службы" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Департамент маркетинга и партнерских отношений-->
+				<Line X1="5200" X2="4800" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="5200" X2="5100" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="5200" X2="5600" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="5200" X2="5850" Y1="297" Y2="353" Stroke="Black"/>
+
+				<Line X1="5100" X2="4950" Y1="447" Y2="503" Stroke="Black"/>
+				<Line X1="5100" X2="5200" Y1="447" Y2="503" Stroke="Black"/>
+
+				<Line X1="5600" X2="5450" Y1="447" Y2="503" Stroke="Black"/>
+				<Line X1="5600" X2="5700" Y1="447" Y2="503" Stroke="Black"/>
+
+				<Button Name="btn27" Canvas.Top="200" Canvas.Left="5100" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Департамент маркетинга и партнерских отношений" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn28" Canvas.Top="350" Canvas.Left="4700" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Департамент маркетинга и партнерских отношений" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn29" Canvas.Top="350" Canvas.Left="5000" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление маркетинга" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn30" Canvas.Top="500" Canvas.Left="4850" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Лицензионный отдел" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn31" Canvas.Top="500" Canvas.Left="5100" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление маркетинга" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn32" Canvas.Top="350" Canvas.Left="5500" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление по развитию бизнеса" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn33" Canvas.Top="500" Canvas.Left="5350" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел по  привлечению новых клиентов" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn34" Canvas.Top="500" Canvas.Left="5600" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел по организации мероприятий" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn35" Canvas.Top="350" Canvas.Left="5750" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление по развитию партнерских отношений" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Департамент по организации корпоративов-->
+
+				<Button Name="btn36" Canvas.Top="200" Canvas.Left="6000" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Департамент по организации корпоративов" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Департамент по работе с персоналом-->
+
+				<Button Name="btn37" Canvas.Top="200" Canvas.Left="6250" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Департамент по работе с персоналом" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Департамент по работе с промышленностью-->
+
+				<Button Name="btn38" Canvas.Top="200" Canvas.Left="6500" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Департамент по работе с промышленностью" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Департамент стратегии и планирования-->
+				<Line X1="7000" X2="6850" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="7000" X2="7100" Y1="297" Y2="353" Stroke="Black"/>
+
+				<Button Name="btn39" Canvas.Top="200" Canvas.Left="6900" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Департамент стратегии и планирования" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn40" Canvas.Top="350" Canvas.Left="6750" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Аналитический отдел" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn41" Canvas.Top="350" Canvas.Left="7000" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Отдел проектного управления" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Управление Финансового планирования и контроля-->
+
+				<Button Name="btn42" Canvas.Top="200" Canvas.Left="7250" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление Финансового планирования и контроля" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Финансово-экономический департамент-->
+				<Line X1="8000" X2="7600" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="8000" X2="7850" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="8000" X2="8100" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="8000" X2="8350" Y1="297" Y2="353" Stroke="Black"/>
+
+				<Line X1="7850" X2="7850" Y1="447" Y2="503" Stroke="Black"/>
+
+				<Button Name="btn43" Canvas.Top="200" Canvas.Left="7900" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Финансово-экономический департамент" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn44" Canvas.Top="350" Canvas.Left="7500" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление бухгалтерского и налогового учета" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn45" Canvas.Top="350" Canvas.Left="7750" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление казначейства" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn46" Canvas.Top="500" Canvas.Left="7750" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Операционный отдел" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn47" Canvas.Top="350" Canvas.Left="8000" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Финансово-экономический департамент" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn48" Canvas.Top="350" Canvas.Left="8250" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Финансово-экономическое управление" TextWrapping="Wrap"/>
+				</Button>
+
+				<!--Юридический департамент-->
+				<Line X1="8750" X2="8600" Y1="297" Y2="353" Stroke="Black"/>
+				<Line X1="8750" X2="8850" Y1="297" Y2="353" Stroke="Black"/>
+
+				<Button Name="btn49" Canvas.Top="200" Canvas.Left="8650" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Юридический департамент" TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn50" Canvas.Top="350" Canvas.Left="8500" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Управление нормативного обеспечения и договорной " TextWrapping="Wrap"/>
+				</Button>
+
+				<Button Name="btn51" Canvas.Top="350" Canvas.Left="8750" Width="200" Height="100" Click="Structure_Click">
+					<TextBlock Text="Юридический департамент" TextWrapping="Wrap"/>
+				</Button>
+			</Canvas>
+		</ScrollViewer>
+		
+		<!--Список сотрудников-->
+
+		<ListView x:Name="LVEmployees" Grid.Column="1" Grid.Row="1" Margin="10" Padding="20" Background="LightGray" MinWidth="700">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<Border CornerRadius="15" Background="#78B24B" Padding="10" Width="680" Margin="5" MouseDown="ToEmployeeWindow">
+						<StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="{Binding Path=Department}"/>
+								<TextBlock Text=" - "/>
+								<TextBlock Text="{Binding Path=Position}"/>
+							</StackPanel>
+							<TextBlock FontSize="15" Text="{Binding Path=FIO}"/>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="{Binding Path=WorkPhone}"/>
+								<TextBlock Text="{Binding Path=Email}" Margin="10,0,0,0"/>
+							</StackPanel>
+							<TextBlock Text="{Binding Path=OfficeNumber}"/>
+						</StackPanel>
+					</Border>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+		<Border Height="50" Width="50" Background="#89FC43" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50" Opacity="0.6" MouseEnter="Button_GotMouseCapture" Mouse.MouseLeave="Button_LostMouseCapture" MouseDown="AddEmployee">
+			<TextBlock Text="+" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+		</Border>
+
+	</Grid>
+</Window>

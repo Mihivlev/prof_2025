@@ -1,0 +1,142 @@
+﻿body {
+	margin: 0;
+}
+
+input {
+	border-block-width: 0;
+}
+
+button {
+	background-color: transparent;
+	border-width: 0;
+	width: 100px;
+	height: 100%;
+}
+
+/* Для верхней панели */
+
+.Logo {
+	width: 70px;
+	margin: 5px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.HeadBlock {
+	background: #78B24B;
+	width: 100%;
+}
+
+.Search {
+	width: 90%;
+	height: 25px;
+	padding: 5px;
+	margin: auto;
+	border-radius: 2.5em;
+}
+
+/* Некоторые св-ва */
+
+.FontColorRed {
+	color: #FC4343;
+}
+
+.BackgroundColorGreen {
+	background-color: #89FC43;
+}
+
+.BackgroundColorYellow {
+	background-color: #F8FC43;
+}
+
+.BackgroundColorRed {
+	background-color: #FC4343;
+}
+
+.Width300 {
+	width: 300px;
+}
+
+.Width500 {
+	width: 500px;
+}
+
+.Margin10 {
+	margin: 10px;
+}
+
+.Color {
+	background-color: #78B24B;
+	color: white;
+}
+
+/* Для списка сотрудника */
+
+.Block {
+	margin: 20px 3% 20px 3%;
+}
+
+.EmployeesBlock {
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 90%;
+}
+
+.Employee {
+	width: 300px;
+	margin: 10px;
+	padding: 10px;
+	background-color: #78B24B;
+	color: white;
+}
+
+.JustFlex {
+	display:flex;
+}
+/* Для мероприятий и календаря */
+
+.GridForMain {
+	display: grid;
+	grid-template-columns: 500px auto;
+}
+
+.ForEvents {
+	overflow: auto;
+	height: 500px;
+}
+
+.Event {
+	width: 400px;
+	margin: 10px auto 10px auto;
+	padding: 10px;
+	background-color: #78B24B;
+	color: white;
+}
+
+.Calendar {
+	width: 500px;
+	display: grid;
+	grid-template-rows: 50px auto 50px;
+}
+
+.CalendarCell {
+	padding: 10px;
+	border-radius: 2em;
+}
+
+.CalendarWeek {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	place-items: center;
+}
+
+.CalendarTable {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	place-items: center;
+}

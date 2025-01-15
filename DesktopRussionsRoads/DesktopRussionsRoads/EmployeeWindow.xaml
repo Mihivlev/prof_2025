@@ -1,0 +1,61 @@
+﻿<Window x:Class="DesktopRussionsRoads.EmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopRussionsRoads"
+        mc:Ignorable="d"
+       	Icon="\Resources\Logo.png" ResizeMode="NoResize"
+        Title="{Binding Path=FIO}" Height="900" Width="800" Background="#78B24B" Name="WEmployee">
+	<Border Background="White" Margin="10">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="2*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<TextBlock Text="Информация о сотруднике" Grid.ColumnSpan="2" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+			<TextBlock Text="ФИО" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+			<TextBox Name="IFIO" Grid.Row="1" Grid.Column="1" Text="{Binding Path=FIO}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="30" FontSize="15"/>
+
+			<TextBlock Text="Отдел" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+			<ComboBox Name="CBDepartment" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="30" FontSize="15"/>
+
+			<TextBlock Text="Должность" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+			<TextBox Name="IPosition" Grid.Row="3" Grid.Column="1" Text="{Binding Path=Position}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="30" FontSize="15"/>
+
+			<TextBlock Text="Рабочий телефон" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+			<TextBox x:Name="IWorkPhone" Grid.Row="4" Grid.Column="1" Text="{Binding Path=WorkPhone}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="30" FontSize="15"/>
+
+			<TextBlock Text="Номер кабинет" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+			<TextBox x:Name="IOfficeNumber" Grid.Row="5" Grid.Column="1" Text="{Binding Path=OfficeNumber}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="30" FontSize="15"/>
+
+			<TextBlock Text="Email" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+			<TextBox x:Name="IEmail" Grid.Row="6" Grid.Column="1" Text="{Binding Path=Email}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="30" FontSize="15"/>
+
+			<TextBlock Text="Birth" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+			<DatePicker Name="IDateBirth" Grid.Row="7" Grid.Column="1" SelectedDate="{Binding Path=DateBirth}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="30" FontSize="15"/>
+
+			<StackPanel  Grid.Row="8" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+				<Border CornerRadius="15" Width="95" Grid.Row="8" Grid.Column="1" Background="#78B24B" MouseDown="SaveChanges" Padding="10" Margin="20">
+					<TextBlock Name="btnSave" Text="Сохранить" FontSize="15" HorizontalAlignment="Center"/>
+				</Border>
+				<Border CornerRadius="15" Width="95" Grid.Row="8" Grid.Column="1" Background="#FC4343" MouseDown="Delete" Padding="10" Margin="20">
+					<TextBlock Name="btnDelete" Text="Удалить" FontSize="15" HorizontalAlignment="Center"/>
+				</Border>
+			</StackPanel>
+		</Grid>
+	</Border>
+</Window>

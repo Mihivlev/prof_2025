@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="18aa9fba9284465ea4df50b8bd7f37cb" Name="Diagram1">
+        <EntityTypeShape EntityType="BD_RussionsRoadsModel.Departments" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_RussionsRoadsModel.Employees" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_RussionsRoadsModel.Events" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_RussionsRoadsModel.Materials" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_RussionsRoadsModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_RussionsRoadsModel.WorkingCalendar" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="BD_RussionsRoadsModel.FK_Employees_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_RussionsRoadsModel.FK_Materials_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_RussionsRoadsModel.FK_Events_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_RussionsRoadsModel.FK_Materials_Employees" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

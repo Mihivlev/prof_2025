@@ -1,0 +1,98 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Page-1" id="ThFwVxVAOfFa0BOayrFi">
+    <mxGraphModel dx="1195" dy="669" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4D9900;strokeColor=#4D9900;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="120" width="40" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-4" value="Пользователь" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-5" value="Приложение" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="520" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-6" value="БД" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-7" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.025;entryY=0.105;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="119" y="204" as="sourcePoint" />
+            <mxPoint x="560" y="204" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-8" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.025;entryY=0.105;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="599" y="245" as="sourcePoint" />
+            <mxPoint x="1040" y="245" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-9" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.025;entryY=0.105;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="119" y="286" as="sourcePoint" />
+            <mxPoint x="560" y="286" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-10" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.025;entryY=0.105;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="119" y="367" as="sourcePoint" />
+            <mxPoint x="560" y="367" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-12" value="Изменение карточки сотрудника" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-13" value="Добавление карточки сотрудника" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="240" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-14" value="Удаление карточки сотрудника" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="320" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-16" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.025;entryY=0.105;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="599" y="323" as="sourcePoint" />
+            <mxPoint x="1040" y="323" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4D9900;strokeColor=#4D9900;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="40" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-17" value="Добавление \ изменение данных" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="200" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-18" value="Удаление данных" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="280" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-21" value="Показ данных в удобном виде" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="400" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-22" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.025;entryY=0.105;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="561" y="440" as="sourcePoint" />
+            <mxPoint x="120" y="440" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4D9900;strokeColor=#4D9900;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="40" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-23" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.025;entryY=0.105;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1041" y="400" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aJdxklIkQ2OrmEIIkCzz-24" value="Загрузка данных" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="360" width="360" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

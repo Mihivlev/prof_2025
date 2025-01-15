@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Дороги России</title>
+    <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+    <div class="flex HeadBlock">
+        <img class="Logo" src="../Resources/Logo.png" />
+        <input id="ISearch" class="Search" placeholder="Введите для поиска" />
+    </div>
+
+    <div class="Block">
+        <h1>Сотрудники</h1>
+        <div id="EmployeesBlock" class="JustFlex EmployeesBlock"></div>
+    </div>
+
+    <div class="Block GridForMain">
+
+        <div id="EventsBlock">
+            <div id="Calendar" class="Calendar">
+                <div class="flex Color">
+                    <button onclick="LastMonth()"><</button>
+                    <h2 id="CalendarMonth">Месяц</h2>
+                    <button onclick="NextMonth()">></button>
+                </div>
+                <div>
+                    <div class="CalendarWeek">
+                        <h5>пн</h5>
+                        <h5>вт</h5>
+                        <h5>ср</h5>
+                        <h5>чт</h5>
+                        <h5>пт</h5>
+                        <h5>сб</h5>
+                        <h5>вс</h5>
+                    </div>
+                    <div class="CalendarTable" id="CalendarTable">
+
+                    </div>
+                </div>
+                <div class="flex Color">
+                    <h1></h1>
+                    <h3 id="CalendarYear" class="Margin10"></h3>
+                </div>
+            </div>
+            <div id="AllEvents">
+                <h1>События</h1>
+            </div>
+        </div>
+
+        <div id="NewsBlock" class="Block">
+            <h1>Новости</h1>
+        </div>
+    </div>
+    <script>
+        async function LoadEmployees(Kr) {
+            const responce = await fetch("http://localhost:55000/api/Employees", {
+                method: "GET",
+                headers: { 'Accept': 'application/json' },
+            })
+            if (responce.ok) {
+                const data = await responce.json()
+                const EmployeesBlock = document.getElementById("EmployeesBlock")
+
+                // Очистка списка сотрудников
+
+                while (EmployeesBlock.firstChild) EmployeesBlock.firstChild.remove()
+
+                // Перебор сотрудников
+
+                for (let i = 0; i < data.length; i++) {
+                    const Employee = data[i]
+
+                    // Проверка по критериям
+
+                    if (Kr != null && Employee.FIO.indexOf(Kr) > -1) { }
+                    else if (Kr != null && Employee.Position.indexOf(Kr) > -1) { }
+                    else if (Kr != null && Employee.Email.indexOf(Kr) > -1) { }
+                    else if (Kr == null) { }
+                    else continue
+
+                    // Создание ячейки сотрудника
+
+                    const EmployeeHTML = document.createElement("div")
+                    EmployeeHTML.className = "Employee"
+
+                    // ФИО сотрудника
+
+                    const FIO = document.createElement("h3")
+                    FIO.textContent = Employee.FIO
+                    FIO.className = "Width300"
+                    EmployeeHTML.appendChild(FIO)
+
+                    // Должность сотрудника
+
+                    const Position = document.createElement("p")
+                    Position.textContent = Employee.Position
+                    EmployeeHTML.appendChild(Position)
+
+                    // Почта сотрудника
+
+                    const Email = document.createElement("p")
+                    Email.textContent = Employee.Email
+                    EmployeeHTML.appendChild(Email)
+
+                    // Рабочий телефон сотрудника
+
+                    const WorkPhone = document.createElement("p")
+                    WorkPhone.textContent = Employee.WorkPhone
+                    EmployeeHTML.appendChild(WorkPhone)
+
+                    // Дата рождения сотрудника
+
+                    const dateBirth = new Date(Employee.DateBirth)
+
+                    const DateBirth = document.createElement("p")
+                    const Months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"]
+                    DateBirth.textContent = `${dateBirth.getDate()} ${Months[dateBirth.getMonth()]} ${dateBirth.getFullYear()}г`
+                    EmployeeHTML.appendChild(DateBirth)
+
+                    // Добавление в список
+
+                    EmployeesBlock.appendChild(EmployeeHTML)
+                }
+            }
+        }
+        async function GetFIO(id) {
+            const response = await fetch("http://localhost:55000/api/Employees/" + id, {
+                method: "GET",
+                headers: { 'Access': 'application/json' }
+            })
+            if (response.ok) {
+                const data = await response.json()
+                return data.FIO
+            }
+        }
+        async function LoadEvents(Kr) {
+            const response = await fetch("http://localhost:55000/api/Events", {
+                method: "GET",
+                headers: { 'Access': 'application/json' }
+            })
+            if (response.ok) {
+                const data = await response.json()
+                const EventsBlock = document.getElementById("AllEvents")
+
+                while (EventsBlock.firstChild) EventsBlock.firstChild.remove()
+
+                for (let i = 0; i < data.length; i++) {
+                    const Event = data[i]
+
+                    var MakerFIO = await GetFIO(Event.MakerID)
+
+                    if (Kr != null && MakerFIO.indexOf(Kr) > -1) { }
+                    else if (Kr != null && Event.Name.indexOf(Kr) > -1) { }
+                    else if (Kr != null && Event.Description.indexOf(Kr) > -1) { }
+                    else if (Kr == null) { }
+                    else continue
+
+                    CurrentDate = new Date(sessionStorage.getItem("CalendarDate"))
+                    const start = new Date(Event.Start)
+
+                    if (CurrentDate.getFullYear() == start.getFullYear() && CurrentDate.getMonth() == start.getMonth()) {
+
+                        const EventHTML = document.createElement("div")
+                        EventHTML.className = "Event"
+
+                        CurrentDay = start.getDate()
+                        console.log()
+                        EventCounts = sessionStorage.getItem(`CCell${CurrentDay}_CountEvents`) + 1
+                        let Ccell = document.getElementById(`CCell${start.getDate()}`)
+                        sessionStorage.setItem(`Ccell${CurrentDay}_CountEvents`, EventCounts)
+                        if (EventCounts == 0) continue
+                        else if (EventCounts < 2) Ccell.classList.add("BackgroundColorGreen")
+                        else if (EventCounts >= 5) Ccell.classList.add("BackgroundColorRed")
+                        else Ccell.classList.add("BackgroundColorYellow")
+
+                        // Название мероприятия
+
+                        const Name = document.createElement("h3")
+                        Name.textContent = Event.Name
+                        EventHTML.appendChild(Name)
+
+                        // Описание мероприятия
+
+                        const Desciption = document.createElement("p")
+                        Desciption.textContent = Event.Description
+                        EventHTML.appendChild(Desciption)
+
+                        // Элемент для автора и даты
+
+                        const DopInf = document.createElement("div")
+                        DopInf.className = 'flex'
+                        EventHTML.appendChild(DopInf)
+
+                        // Дата начала мероприятия
+
+                        var startDay = start.getDate()
+                        var startMonth = start.getMonth() + 1
+                        if (startDay < 10) startDay = "0" + toString(startDay)
+                        if (startMonth < 10) startMonth = "0" + toString(startMonth)
+
+                        const Start = document.createElement("h5")
+                        Start.textContent = `${startDay}.${startMonth}.${start.getFullYear()}`
+                        DopInf.appendChild(Start)
+
+                        // Автор мероприятия
+
+                        const FIO = document.createElement("h5")
+                        FIO.textContent = await GetFIO(Event.MakerID)
+                        DopInf.appendChild(FIO)
+
+                        EventsBlock.appendChild(EventHTML)
+                    }
+                }
+            }
+        }
+        async function LoadCalendar(CurrentDate) {
+            const Months = ["Январь", "Ферваль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+            let CalendarTable = document.getElementById("CalendarTable")
+            let CalendarYear = document.getElementById("CalendarYear")
+            let CalendarMonth = document.getElementById("CalendarMonth")
+
+            while (CalendarTable.childElementCount > 0) CalendarTable.lastChild.remove()
+            let CurrentYear = CurrentDate.getFullYear()
+            let CurrentMonth = CurrentDate.getMonth()
+            CalendarMonth.textContent = Months[CurrentMonth]
+            CalendarYear.textContent = CurrentYear
+
+            //Пустые ячейки перед днями
+
+            for (let i = 1; i < CurrentDate.getDay(); i++) {
+                const EmptyCell = document.createElement("h3")
+                EmptyCell.className = "CalendarCell"
+                EmptyCell.textContent = " "
+                CalendarTable.appendChild(EmptyCell)
+            }
+            if (CurrentDate.getDay() == 0) {
+                for (let i = 1; i < 7; i++) {
+                    const EmptyCell = document.createElement("h3")
+                    EmptyCell.className = "CalendarCell"
+                    CalendarTable.appendChild(EmptyCell)
+                }
+            }
+
+            // Дни Месяца
+
+            for (let i = 1, thisMonth = true; thisMonth == true; i++) {
+                const CalendarCell = document.createElement("h3")
+                CalendarCell.className = "CalendarCell"
+                CalendarCell.id = `CCell${i}`
+                sessionStorage.setItem(`Ccell${i}_CountEvents`, 0)
+                CalendarCell.textContent = i
+                CurrentDate.setDate(i + 1)
+                CalendarTable.appendChild(CalendarCell)
+
+                if (CurrentMonth != CurrentDate.getMonth()) {
+                    thisMonth = false
+                    CurrentDate.setDate(i)
+                    CurrentDate.setMonth(CurrentMonth)
+                }
+            }
+
+            LoadEvents()
+            LoadWorkingCalendar()
+        }
+        async function NextMonth() {
+            var CurrentDate = new Date(sessionStorage.getItem("CalendarDate"))
+            if (CurrentDate.getMonth() == 11) {
+                CurrentDate.setFullYear(CurrentDate.getFullYear() + 1)
+                CurrentDate.setMonth(0)
+            }
+            else CurrentDate.setMonth(CurrentDate.getMonth() + 1)
+            sessionStorage.setItem("CalendarDate", CurrentDate)
+            LoadCalendar(CurrentDate)
+        }
+        async function LastMonth() {
+            var CurrentDate = new Date(sessionStorage.getItem("CalendarDate"))
+            if (CurrentDate.getMonth() == 0) {
+                CurrentDate.setFullYear(CurrentDate.getFullYear() - 1)
+                CurrentDate.setMonth(11)
+            }
+            else CurrentDate.setMonth(CurrentDate.getMonth() - 1)
+            sessionStorage.setItem("CalendarDate", CurrentDate)
+            LoadCalendar(CurrentDate)
+        }
+        async function LoadWorkingCalendar() {
+            const response = await fetch("http://localhost:55000/api/WorkingCalendars", {
+                method: "GET",
+                headers: { 'Access': 'application/json' }
+            })
+            if (response.ok) {
+                const data = await response.json()
+                for (let i = 0; i < data.length; i++) {
+                    let Day = data[i]
+                    CurrentDate = new Date(Day.ExceptionDate)
+                    let CalendartDate = new Date(sessionStorage.getItem("CalendarDate"))
+                    if (Day.IsWorkingDay == false && CurrentDate.getMonth() == CalendartDate.getMonth()) {
+                        let Ccell = document.getElementById(`CCell${CurrentDate.getDate()}`)
+                        Ccell.classList.add("FontColorRed")
+                    }
+                }
+            }
+        }
+
+        var ISearch = document.getElementById("ISearch")
+        ISearch.addEventListener("input", function (e) { LoadEmployees(e.target.value.trim()); LoadEvents(e.target.value.trim()) })
+
+        var CurrentDate = new Date()
+        CurrentDate.setDate(1)
+
+        sessionStorage.setItem("CalendarDate", CurrentDate)
+        LoadCalendar(new Date())
+        LoadEmployees(null)
+    </script>
+</body>
+</html>
